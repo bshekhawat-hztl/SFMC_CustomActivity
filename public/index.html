@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Journey Builder Activity</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var config = {
+                baseUrl: 'js'
+            };
+
+            var dependencies = [
+                'customActivity'
+            ];
+
+            require(config, dependencies); 
+        })();
+    </script>
+
+    <!--Styles-->
+    <style type="text/css">
+        #step1 {
+            display: block;
+        }
+    </style>
+
+</head>
+    <body>
+    <div id="step1" class="step">
+        <h2>Message Body</h2>
+        <hr>
+        <div class="form-group">
+            <div><label for="messageBody">Create message body:</label></div>
+            <input style="padding: 20px 10px; line-height: 28px;" class="form-control" id="messageBody" type="text" name="messageBody" value="">        
+        </div> 
+    </div>
+    
+    <div id="step2" class="step">
+    <h2>Business Name</h2>
+    <hr>
+    <div class="form-group">
+        <div><label for="messagingService">From Number:</label></div>
+        <input class="form-control" id="messagingService" type="text" name="messagingService" value="">
+    </div>  
+    </div>
+    
+    <div id="step3" class="step">
+    <h2>Channel ID</h2>
+    <hr>
+    <div class="form-group">
+        <div><label for="accountSID">Account SID:</label></div>
+            <input class="form-control" id="accountSID" type="text" name="accountSID" value="">
+        </div>
+    </div>
+    
+    <div id="step4" class="step">
+        <h2>Auth Token</h2>
+        <hr>
+            <div class="form-group">
+                <div><label for="authToken">Auth Token:</label></div>
+                <input class="form-control" id="authToken" type="text" name="authToken" value="">
+            </div>
+    </div>    
+    
+</body>
+
+    
+</html>

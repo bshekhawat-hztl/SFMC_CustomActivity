@@ -1,0 +1,142 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+       "icon": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "Twilio SMS",
+           "description": "Send Twilio SMS with Journey Builder",
+           "TwilioMessage":"test"
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                  "email": "{{Contact.Attribute.AA_Twilio.Subscriberkey}}",
+                  "to": "{{Contact.Attribute.AA_Twilio.Phone}}" 
+                }               
+            ],
+            "outArguments": [],
+            "url": "https://twiliosfmc.herokuapp.com/journeybuilder/execute",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "7ed9e1be-42f5-48b8-a831-7e86e484ea95",
+       "save": {
+           "url": "https://twiliosfmc.herokuapp.com/journeybuilder/save",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false
+            
+       },
+       "publish": {
+           "url": "https://twiliosfmc.herokuapp.com/journeybuilder/publish",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false
+     
+       },
+       "validate": {
+           "url": "https://twiliosfmc.herokuapp.com/journeybuilder/validate",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false
+            
+       },
+       "stop": {
+          "url": "https://twiliosfmc.herokuapp.com/journeybuilder/stop",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false
+       }
+    },
+    "wizardSteps": [{
+			"label": "First Step",
+			"key": "step1"
+		},
+		{
+			"label": "Second Step",
+			"key": "step2"
+		},
+		{
+			"label": "Third Step",
+			"key": "step3"
+		},
+		{
+			"label": "Final Step",
+			"key": "step4"
+		}     
+		     
+	],
+    "userInterfaces": {
+       "configModal": {
+           "height": 520,
+           "width": 1000,
+           "fullscreen": false
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "accountSid": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "authToken": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "from": {
+                            "dataType": "Phone",
+                            "isNullable": true,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "to": {
+                            "dataType": "Phone",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },
+                    {
+                        "body": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "email": {
+                            "dataType": "Email",
+                            "isNullable": true,
+                            "direction": "out"
+                        }
+                    }
+                ],
+                "outArguments": []
+            }
+        }
+    }
+}
