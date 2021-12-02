@@ -1,11 +1,5 @@
 'use strict';
 
-//Twilo Message Code
-
-
-//End Twilo Message Code
-
-
 // Deps
 var activity = require('./activity');
 
