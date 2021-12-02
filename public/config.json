@@ -30,7 +30,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "1f2c1278-cdad-4b88-8382-c21f8436e47d",
        "save": {
-           "url": "https://viber-activity.herokuapp.com/save",
+           "url": "https://viber-activity.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -38,7 +38,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://viber-activity.herokuapp.com/publish",
+           "url": "https://viber-activity.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -46,7 +46,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": " https://viber-activity.herokuapp.com/validate",
+           "url": " https://viber-activity.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -54,7 +54,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": " https://viber-activity.herokuapp.com/stop",
+           "url": " https://viber-activity.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
