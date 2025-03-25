@@ -19,7 +19,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://viber-activity.herokuapp.com/journeybuilder/execute",
+            "url": "https://custom-activity-test-9178310ee903.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -30,7 +30,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "1f2c1278-cdad-4b88-8382-c21f8436e47d",
        "save": {
-           "url": "https://viber-activity.herokuapp.com/journeybuilder/save",
+           "url": "https://custom-activity-test-9178310ee903.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -38,7 +38,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://viber-activity.herokuapp.com/journeybuilder/publish",
+           "url": "https://custom-activity-test-9178310ee903.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -46,7 +46,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": " https://viber-activity.herokuapp.com/journeybuilder/validate",
+           "url": "https://custom-activity-test-9178310ee903.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -54,7 +54,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": " https://viber-activity.herokuapp.com/journeybuilder/stop",
+           "url": "https://custom-activity-test-9178310ee903.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
