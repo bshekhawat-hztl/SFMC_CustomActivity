@@ -31,50 +31,24 @@ define([
     }
 
   function initialize(data) {
-        console.log("Initializing data data: "+ JSON.stringify(data));
-        if (data) {
-            payload = data;
-        }    
-
-        var hasInArguments = Boolean(
-            payload['arguments'] &&
-            payload['arguments'].execute &&
-            payload['arguments'].execute.inArguments &&
-            payload['arguments'].execute.inArguments.length > 0
-         );
-
-        var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
-        console.log('Has In arguments: '+JSON.stringify(inArguments));
-
-        $.each(inArguments, function (index, inArgument) {
-            $.each(inArgument, function (key, val) {
-
-                if (key === 'accountSid') {
-                    $('#accountSID').val(val);
-                }
-
-                if (key === 'authToken') {
-                    $('#authToken').val(val);
-                }
-
-                if (key === 'messagingService') {
-                    $('#messagingService').val(val);
-                }
-
-                if (key === 'body') {
-                    $('#messageBody').val(val);
-                }                                                               
-
-            })
-        });
-
-        connection.trigger('updateButton', {
-            button: 'next',
-            text: 'done',
-            visible: true
-        });
-
+       var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'https://login.mec1.pure.cloud/oauth/token',
+  'headers': {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  form: {
+    'grant_type': 'client_credentials',
+    'client_id': 'a36298ab-fed3-428c-9d1f-86e99c982b63',
+    'client_secret': 'tJL4zU-PQpV6BHI-owOChKzE5v8M9U0WkDRfbWcU0wY'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+    return response.body;
+});
     }
 
     function onGetTokens (tokens) {
