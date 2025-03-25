@@ -1,14 +1,14 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/iconSmall.png",
+       "icon": "images/G_Icon.png",
        "category": "message"
     },
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Viber Custom Activity",
-           "description": "viber custom activity"
+           "name": "Genesys Custom Activity",
+           "description": "genesys custom activity"
        }
     },
     "arguments": {
