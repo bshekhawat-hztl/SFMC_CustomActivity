@@ -255,6 +255,7 @@ app.post("/execute", async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); */
         
+    console.log("testing 1");    
 var settings = {
   "url": "https://login.mec1.pure.cloud/oauth/token",
   "method": "POST",
@@ -268,11 +269,11 @@ var settings = {
     "client_secret": "tJL4zU-PQpV6BHI-owOChKzE5v8M9U0WkDRfbWcU0wY"
   }
 };
-
+console.log("testing 2");
 $.ajax(settings).done(function (response) {
   console.log('response:----',response);
 });
-        
+      console.log("testing 3");  
 
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
