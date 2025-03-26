@@ -110,7 +110,7 @@ define([
         
 // custom_activity.js - Custom Activity Boilerplate for Genesys-SFMC integration
 
-const express = require("express");
+/*const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request-promise-native");
 const cors = require("cors");
@@ -253,7 +253,25 @@ app.post("/execute", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); */
+        
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'https://login.mec1.pure.cloud/oauth/token',
+  'headers': {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  form: {
+    'grant_type': 'client_credentials',
+    'client_id': 'a36298ab-fed3-428c-9d1f-86e99c982b63',
+    'client_secret': 'tJL4zU-PQpV6BHI-owOChKzE5v8M9U0WkDRfbWcU0wY'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
 
     }                    
 
