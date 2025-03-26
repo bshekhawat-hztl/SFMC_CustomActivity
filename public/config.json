@@ -1,7 +1,7 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/G_Icon.png",
+       "icon": "images/Genesys_Small_Icon.png",
        "category": "message"
     },
     "type": "REST",
