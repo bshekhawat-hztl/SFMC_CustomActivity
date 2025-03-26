@@ -292,10 +292,12 @@ const requestOptions = {
 
 fetch("https://login.mec1.pure.cloud/oauth/token", requestOptions)
   .then((response) => response.text())
-  .then((result) => console.log("result",result))
+  .then((result) => console.log("result",result);
+       connection.trigger('updateActivity', payload);
+       )
   .catch((error) => console.error("error",error));
         
-      var messagingService = $('#messagingService').val();
+     /* var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
         console.log("body",body);
         payload['arguments'].execute.inArguments = [{
@@ -306,8 +308,8 @@ fetch("https://login.mec1.pure.cloud/oauth/token", requestOptions)
 
         payload['metaData'].isConfigured = true;
 
-        console.log("Payload on SAVE function: "+JSON.stringify(payload));
-        connection.trigger('updateActivity', payload);
+        console.log("Payload on SAVE function: "+JSON.stringify(payload));*/
+        
     }                    
 
 });
