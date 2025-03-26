@@ -90,7 +90,7 @@ define([
 
     function save() {
 
-        var accountSid = $('#accountSID').val();
+       /* var accountSid = $('#accountSID').val();
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
@@ -106,11 +106,8 @@ define([
         payload['metaData'].isConfigured = true;
 
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
-        connection.trigger('updateActivity', payload);
-
-    }                    
-
-});
+        connection.trigger('updateActivity', payload);*/
+        
 // custom_activity.js - Custom Activity Boilerplate for Genesys-SFMC integration
 
 const express = require("express");
@@ -257,3 +254,7 @@ app.post("/execute", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+    }                    
+
+});
