@@ -254,8 +254,7 @@ app.post("/execute", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); */
-        
-    /*console.log("testing 1");    
+console.log("testing 1");    
 var settings = {
   "url": "https://login.mec1.pure.cloud/oauth/token",
   "method": "POST",
@@ -272,10 +271,11 @@ var settings = {
 console.log("testing 2");
 $.ajax(settings).done(function (response) {
   console.log('response:----',response);
-});*/
+  connection.trigger('updateActivity', payload)
+});
         
       console.log("testing 3");  
-const myHeaders = new Headers();
+/*const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
 const urlencoded = new URLSearchParams();
@@ -293,9 +293,9 @@ const requestOptions = {
 fetch("https://login.mec1.pure.cloud/oauth/token", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log("result",result)
-       connection.trigger('updateActivity', payload)
+       
        )
-  .catch((error) => console.error("error",error));
+  .catch((error) => console.error("error",error));*/
         
      /* var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
