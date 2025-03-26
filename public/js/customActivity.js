@@ -292,8 +292,8 @@ const requestOptions = {
 
 fetch("https://login.mec1.pure.cloud/oauth/token", requestOptions)
   .then((response) => response.text())
-  .then((result) => console.log("result",result);
-       connection.trigger('updateActivity', payload);
+  .then((result) => console.log("result",result)
+       connection.trigger('updateActivity', payload)
        )
   .catch((error) => console.error("error",error));
         
