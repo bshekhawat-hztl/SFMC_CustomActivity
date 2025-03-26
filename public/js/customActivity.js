@@ -272,7 +272,21 @@ var settings = {
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
+        
 
+        var messagingService = $('#messagingService').val();
+        var body = $('#messageBody').val();
+        console.log("body",body);
+        payload['arguments'].execute.inArguments = [{
+            "messagingService": messagingService,
+            "body": body,
+            "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" //<----This should map to your data extension name and phone number column
+        }];
+
+        payload['metaData'].isConfigured = true;
+
+        console.log("Payload on SAVE function: "+JSON.stringify(payload));
+        connection.trigger('updateActivity', payload);
     }                    
 
 });
