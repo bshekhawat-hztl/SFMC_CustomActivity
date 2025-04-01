@@ -273,15 +273,19 @@ $.ajax(settings).done(function (response) {
   console.log('response:----',response);
     
     console.log('response1:----',response.access_token);
-    var token=response.access_token;
-    console.log('token:----',token);
-    var setting = {
+    var token = response.access_token;
+var tokenType = response.token_type; // This should be "bearer" based on your previous message
+
+// Create the proper authorization header
+var authHeader = tokenType + " " + token; // This will be "bearer YOUR_TOKEN_VALUE"
+console.log('authHeader:----',authHeader);
+var setting = {
   "url": "https://api.mec1.pure.cloud/api/v2/flows/executions",
   "method": "POST",
   "timeout": 0,
   "headers": {
     "Content-Type": "application/json",
-    "Authorization": token
+    "Authorization": authHeader  // Use the properly formatted auth header
   },
   "data": JSON.stringify({
     "flowId": "770ea816-7ce7-4e44-ac49-b935fba7f268",
@@ -303,12 +307,15 @@ $.ajax(settings).done(function (response) {
     }
   }),
 };
+
 console.log("testing 8");  
 $.ajax(setting).done(function (response) {
-
-    console.log('response22:----',response);
+  console.log("API call successful:", response);
     connection.trigger('updateActivity', payload)
-});   
+}).fail(function(jqXHR, textStatus, errorThrown) {
+  console.error("API call failed:", textStatus, errorThrown);
+});
+      
   
 });
      
