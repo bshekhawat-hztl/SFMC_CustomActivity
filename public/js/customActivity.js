@@ -271,7 +271,7 @@ var settings = {
 console.log("testing 2");
 $.ajax(settings).done(function (response) {
   console.log('response:----',response);
-    var obj = JSON.parse(response);
+    var obj = jQuery.parseJSON(response);
     console.log('obj:----',obj);
     console.log('obj2:----',obj.access_token);
     var setting = {
