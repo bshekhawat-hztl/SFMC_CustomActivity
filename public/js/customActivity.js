@@ -273,6 +273,7 @@ $.ajax(settings).done(function (response) {
   console.log('response:----',response);
     
     console.log('response1:----',response.access_token);
+    
     var setting = {
   "url": "https://api.mec1.pure.cloud/api/v2/flows/executions",
   "method": "POST",
@@ -301,7 +302,7 @@ $.ajax(settings).done(function (response) {
     }
   }),
 };
-
+console.log("testing 8");  
 $.ajax(setting).done(function (response) {
 
     console.log('response22:----',response);
