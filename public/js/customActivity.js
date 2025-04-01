@@ -272,17 +272,14 @@ console.log("testing 2");
 $.ajax(settings).done(function (response) {
   console.log('response:----',response);
     
-    console.log('response1:----',response.body);
-    var obj = jQuery.parseJSON(response);
-    console.log('obj:----',obj);
-    console.log('obj2:----',obj.access_token);
+    console.log('response1:----',response.access_token);
     var setting = {
   "url": "https://api.mec1.pure.cloud/api/v2/flows/executions",
   "method": "POST",
   "timeout": 0,
   "headers": {
     "Content-Type": "application/json",
-    "Authorization": obj.access_token
+    "Authorization": response.access_token
   },
   "data": JSON.stringify({
     "flowId": "770ea816-7ce7-4e44-ac49-b935fba7f268",
