@@ -271,9 +271,46 @@ var settings = {
 console.log("testing 2");
 $.ajax(settings).done(function (response) {
   console.log('response:----',response);
-  connection.trigger('updateActivity', payload)
+    var obj = JSON.parse(response);
+    console.log('obj:----',obj);
+    console.log('obj2:----',obj.access_token);
+    var setting = {
+  "url": "https://api.mec1.pure.cloud/api/v2/flows/executions",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": obj.access_token
+  },
+  "data": JSON.stringify({
+    "flowId": "770ea816-7ce7-4e44-ac49-b935fba7f268",
+    "inputData": {
+      "Flow.responseId": "xxxx",
+      "Flow.customerPhone": "+971xxxxxxxxx",
+      "Flow.integrationId": "yyyy",
+      "Flow.sessionId": "sessionid",
+      "Flow.key1": "aaa",
+      "Flow.value1": "bbb",
+      "Flow.key2": "aaa",
+      "Flow.value2": "bbb",
+      "Flow.key3": "aaa",
+      "Flow.value3": "bbb",
+      "Flow.key4": "aaa",
+      "Flow.value4": "bbb",
+      "Flow.key5": "aaa",
+      "Flow.value5": "bbb"
+    }
+  }),
+};
+
+$.ajax(setting).done(function (response) {
+
+    console.log('response22:----',response);
+    connection.trigger('updateActivity', payload)
+});   
+  
 });
-        
+     
       console.log("testing 3");  
 /*const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
