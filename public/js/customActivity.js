@@ -290,20 +290,21 @@ var setting = {
   "data": JSON.stringify({
     "flowId": "770ea816-7ce7-4e44-ac49-b935fba7f268",
     "inputData": {
-      "Flow.responseId": "xxxx",
-      "Flow.customerPhone": "+971xxxxxxxxx",
-      "Flow.integrationId": "yyyy",
-      "Flow.sessionId": "sessionid",
-      "Flow.key1": "aaa",
-      "Flow.value1": "bbb",
-      "Flow.key2": "aaa",
-      "Flow.value2": "bbb",
-      "Flow.key3": "aaa",
-      "Flow.value3": "bbb",
-      "Flow.key4": "aaa",
-      "Flow.value4": "bbb",
-      "Flow.key5": "aaa",
-      "Flow.value5": "bbb"
+      "Flow.responseId": "6339aaa3-6279-462d-8be4-d428ff251ba9",
+      "Flow.customerPhone": "919352221400",
+      "Flow.integrationId": "933eb6ae-5a55-4d0d-b036-41356101e7aa",
+      "Flow.sessionId": "APIEvent-e890190d-a263-bc1c-90b8-ba15d169bb8f",
+        "Flow.ContactId":"SU00077",
+      "Flow.key1": "1",
+      "Flow.value1": "GenesysPOC",
+      "Flow.key2": "",
+      "Flow.value2": "",
+      "Flow.key3": "",
+      "Flow.value3": "",
+      "Flow.key4": "",
+      "Flow.value4": "",
+      "Flow.key5": "",
+      "Flow.value5": ""
     }
   }),
 };
