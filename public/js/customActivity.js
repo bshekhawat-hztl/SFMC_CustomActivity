@@ -22,27 +22,35 @@ define([
     connection.on('clickedNext', save);
     //connection.on('clickedBack', onClickedBack);
     //connection.on('gotoStep', onGotoStep);
+console.log("Execution flow 1");  
 
     function onRender() {
+        console.log("Execution flow 2");  
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
+        console.log("Execution flow 3");  
         connection.trigger('requestTokens');
+        console.log("Execution flow 4");  
         connection.trigger('requestEndpoints');
+        console.log("Execution flow 5"); 
     }
-
+console.log("Execution flow 6"); 
   function initialize(data) {
        console.log("Initializing data data: "+ JSON.stringify(data));
+      console.log("Execution flow 7"); 
         if (data) {
+            console.log("Execution flow 8:"); 
             payload = data;
+            console.log("Execution flow 9: ",payload); 
         }    
-
+console.log("Execution flow 10"); 
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
             payload['arguments'].execute.inArguments &&
             payload['arguments'].execute.inArguments.length > 0
          );
-
+console.log("Execution flow 100"); 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
         console.log('Has In arguments: '+JSON.stringify(inArguments));
@@ -80,6 +88,7 @@ define([
     function onGetTokens (tokens) {
         // Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
         console.log("Tokens function: "+JSON.stringify(tokens));
+        console.log("Execution flow 101");
         //authTokens = tokens;
     }
 
@@ -160,6 +169,7 @@ $.ajax(setting).done(function (response) {
       console.log("testing 3");  
 
         
-    }                    
+    }     
+});               
 
 
