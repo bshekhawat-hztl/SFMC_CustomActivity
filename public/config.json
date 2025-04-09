@@ -15,7 +15,7 @@
         "execute": {
             "inArguments": [
                 {
-                  "viberID": "{{Contact.Attribute.ViberInformation.ViberID}}"
+                  "viberID": "{{Contact.Attribute.Genesy_POC.Phone}}"
                 }               
             ],
             "outArguments": [],
